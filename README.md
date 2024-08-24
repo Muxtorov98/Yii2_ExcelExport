@@ -27,8 +27,10 @@ public function actionExcelExport(): string
 
     return (new ExcelExport())->export($students, $headers, 'excel/', $col);
 }
+```
+### ExcelExport class
 
-
+```
 <?php
 
 namespace app\models\helpers;
@@ -171,4 +173,4 @@ private function generateDownloadLink(string $filePath): string
 }
 
 }
-
+```
