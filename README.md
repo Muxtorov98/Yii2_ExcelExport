@@ -30,7 +30,7 @@ public function actionExcelExport(): string
 ```
 ### ExcelExport class
 
-```
+```php
 <?php
 
 namespace app\models\helpers;
