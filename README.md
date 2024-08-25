@@ -19,13 +19,13 @@ Bu dokumentatsiya `yii2` ilovasida Excel fayllarni eksport qilish uchun ishlatil
  */
 public function actionExcelExport(): string
 {
-    $students = BankMoneyLists::find()->asArray()->all();
+    $model = BankMoneyLists::find()->asArray()->all();
 
     $col = ['A', 'B', 'C', 'D', 'E'];
 
     $headers = ['id', 'user_id', 'branch_id', 'balance', 'counterparty'];
 
-    return (new ExcelExport())->export($students, $headers, 'excel/', $col);
+    return (new ExcelExport())->export($model, $headers, 'excel/', $col);
 }
 ```
 ### ExcelExport class
